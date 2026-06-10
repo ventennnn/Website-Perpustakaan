@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOP Sirkulasi - Perpustakaan SMK Bagimu Negeriku</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-image">
+                    <img src="data:image/png;base64,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" alt="Logo Perpustakaan">
+                </div>
+                <div class="logo-text">
+                    <h2>Perpustakaan</h2>
+                    <p>SMK Bagimu Negeriku</p>
+                </div>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li class="dropdown">
+                    <a href="#">Tentang Kami <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="visi.html">Visi Misi</a></li>
+                        <li><a href="tata-tertib.html">Tata Tertib</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Layanan <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="sop-sirkulasi.html">SOP Sirkulasi</a></li>
+                        <li><a href="form-usulan.html">Form Usulan Buku</a></li>
+                    </ul>
+                </li>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">E-Book</a></li>
+                        <li><a href="#">Sumber Belajar</a></li>
+                    </ul>
+                </li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="katalog.html">Katalog O   nline</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== HERO SOP ========== -->
+    <section class="sop-hero">
+        <div class="sop-hero-content">
+            <h1>SOP Sirkulasi</h1>
+            <p>Standar Operasional Prosedur Layanan Perpustakaan</p>
+        </div>
+    </section>
+
+    <!-- ========== CONTENT SOP ========== -->
+    <div class="sop-wrapper">
+        <!-- Aturan Peminjaman -->
+        <div class="sop-card-large">
+            <div class="sop-card-header">
+                <div class="sop-icon-large">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h2>Aturan Peminjaman</h2>
+            </div>
+            <div class="sop-card-body">
+                <p>Untuk meminjam koleksi, pemustaka harus datang sendiri (tidak boleh diwakilkan) dengan menunjukkan Kartu Tanda Anggota Perpustakaan (KTAP) atau Kartu Pelajar dengan aturan sebagai berikut:</p>
+                <div class="aturan-grid">
+                    <div class="aturan-item">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <div>
+                            <h4>Guru/Karyawan</h4>
+                            <p>14 hari, maksimal 5 eksemplar</p>
+                        </div>
+                    </div>
+                    <div class="aturan-item">
+                        <i class="fa-solid fa-user-graduate"></i>
+                        <div>
+                            <h4>Siswa</h4>
+                            <p>7 hari, maksimal 2 eksemplar</p>
+                        </div>
+                    </div>
+                    <div class="aturan-item">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <div>
+                            <h4>Denda</h4>
+                            <p>Rp. 500/hari/eksemplar</p>
+                        </div>
+                    </div>
+                    <div class="aturan-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h4>Perpanjangan</h4>
+                            <p>Maksimal 2x masa pinjaman</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layanan Peminjaman -->
+        <div class="sop-card-large">
+            <div class="sop-card-header">
+                <div class="sop-icon-large">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h2>Layanan Peminjaman Koleksi</h2>
+            </div>
+            <div class="sop-card-body">
+                <p>Layanan peminjaman bertugas mencatat semua hal yang terkait dengan peminjaman, mencakup data peminjam, koleksi yang dipinjam, dan waktu peminjaman.</p>
+                <div class="prosedur-list">
+                    <div class="prosedur-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Pemustaka mencari data bibliografi melalui OPAC (Online Public Access Catalogue) di Perpustakaan SMK Bagimu Negeriku. Setelah data ditemukan, cari bahan pustaka tersebut pada ruang koleksi.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Menyerahkan bahan pustaka dan KTAP/Kartu Pelajar yang masih berlaku kepada petugas.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Setelah selesai diproses oleh petugas, petugas membubuhkan cap tanggal kembali pada lidah buku pada halaman terakhir buku.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">4</div>
+                        <div class="step-text">Bahan pustaka yang dipinjam dan KTAP/Kartu Pelajar diserahkan kepada peminjam.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layanan Pengembalian -->
+        <div class="sop-card-large">
+            <div class="sop-card-header">
+                <div class="sop-icon-large">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                </div>
+                <h2>Layanan Pengembalian Koleksi</h2>
+            </div>
+            <div class="sop-card-body">
+                <p>Layanan pengembalian meliputi kegiatan mencatat semua hal yang terkait dengan pengembalian, mencakup data pengembalian, koleksi yang dikembalikan, waktu pengembalian, termasuk memberikan sanksi denda apabila ada keterlambatan.</p>
+                <div class="prosedur-list">
+                    <div class="prosedur-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Peminjam menyerahkan bahan pustaka yang dipinjam dengan disertai KTAP/Kartu Pelajar.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Petugas akan melakukan proses pengembalian dan akan menyerahkan kembali KTAP/Kartu Pelajar apabila proses telah selesai.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Membayar denda jika terlambat mengembalikan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Layanan Perpanjangan -->
+        <div class="sop-card-large">
+            <div class="sop-card-header">
+                <div class="sop-icon-large">
+                    <i class="fa-solid fa-calendar-plus"></i>
+                </div>
+                <h2>Layanan Perpanjangan Koleksi</h2>
+            </div>
+            <div class="sop-card-body">
+                <p>Layanan perpanjangan adalah kegiatan untuk memperpanjang masa pinjaman koleksi. Koleksi hanya dapat diperpanjang maksimal 2x perpanjangan.</p>
+                <div class="prosedur-list">
+                    <div class="prosedur-step">
+                        <div class="step-number">1</div>
+                        <div class="step-text">Peminjam menyerahkan bahan pustaka yang dipinjam dengan disertai KTAP/Kartu Pelajar.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">2</div>
+                        <div class="step-text">Petugas akan melakukan proses perpanjangan dan akan menyerahkan kembali KTAP/Kartu Pelajar apabila proses telah selesai.</div>
+                    </div>
+                    <div class="prosedur-step">
+                        <div class="step-number">3</div>
+                        <div class="step-text">Membayar denda jika terlambat mengembalikan.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>Perpustakaan SMK Bagimu Negeriku</h3>
+            <p>Jalan Palir Raya No. 66-68,</p>
+            <p>Ngaliyan, Semarang</p>
+            <p>Email: perpusbnsemarang@gmail.com</p>
+            <p><i class="fas fa-phone"></i> +62 815-7525-9525</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Tautan</h3>
+            <ul>
+                <li><a href="visi.html">Visi Misi</a></li>
+                <li><a href="tata-tertib.html">Tata Tertib</a></li>
+                <li><a href="sop-sirkulasi.html">SOP Sirkulasi</a></li>
+                <li><a href="katalog.html">Katalog</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Formulir</h3>
+            <ul>
+                <li><a href="form-usulan.html">Form Usulan Buku</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 PERPUSTAKAAN SMK BAGIMU NEGERIKU</p>
+    </div>
+</footer>
+
+    <button onclick="topFunction()" id="backToTop">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
